@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>PokeTeam</title>
+</head>
+<body>
+    <header class="container-time">
+        <h1>Time Pokémon</h1>
+        <div id="descrição-time">
+            <label for="nome-time">Nome do Time:</label>
+            <input type="text" id="nome-time" placeholder="Digite o nome do time">
+            <button onclick="saveTeam()">Salvar Time</button>
+        </div>
+        <div id="formação-time">
+            <ul>
+                
+            </ul>
+        </div>
+    </header>
+
+    <section class="container-pokemons">
+        <div id="pesquisa">
+            <input type="text" id="procurar-input" placeholder="Procurar pokémon">
+            <input type="submit" value="Pesquisar" id="procurar-button">
+        </div>
+        <div class="lista-pokemons">
+            <ul>
+
+            </ul>
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
