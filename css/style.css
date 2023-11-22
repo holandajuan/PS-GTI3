@@ -2,36 +2,57 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:Verdana, Geneva, Tahoma, sans-serif
+    font-family: 'Montserrat';
 }
 
 .container-time {
-    background-color:rgba(127, 255, 212, 0.418);
+    background-image: url(/img/site-pokemon-background.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
     padding-top: 2em;
     padding-left: 2em;
     padding-bottom: 1em;
 }
 .container-time h1 {
+    font-size: 40px;
     border-bottom: 2px solid #000;
+    color: #fff;
 }
 
 #descrição-time {
     padding-top: 2em;
 }
 
+#descrição-time label {
+    color: #fff;
+    font-size: larger;
+}
+
 #descrição-time input {
-    height: 25px;
+    border-style: none;
+    height: 35px;
+    width: 250px;
     border-radius: 5px;
 }
 
-#formação-time {
-    padding-bottom: 7em;
-    padding-top: 2em;
+#descrição-time button {
+    height: 35px;
+    width: auto;
+    background-color: gray;
+    color: #fff;
+    font-weight: bold;
+}
+
+#descrição-time button:active {
+     
+    transform: scale(0.97);
+    transition: 0.2s;
+    
 }
 
 #formação-time ul {
     display: flex;
-
+    padding: 15px 0;
     gap: 3em;
     color: azure;
     font-size: 14px;
@@ -54,32 +75,49 @@
     height: 150px;
 }
 
+.container-pokemons-fundo {
+    background-color: blueviolet;
+    height: 100%;
+    
+}
+
 .container-pokemons {
-    padding: 2em;
     height: 100%;
 }
 
 #pesquisa {
-    padding-bottom: 100px;
+    padding: 42px 42px 0px 42px;
 }
 
 #pesquisa #procurar-input {
     height: 35px;
     width: 250px;
+    border-radius: 4px;
 }
 
 #pesquisa #procurar-button {
     height: 35px;
 }
 
+.lista-pokemons {
+    padding-bottom: 1px;
+}
+
 
 .lista-pokemons ul {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 3em;
     color: azure;
     font-size: 14px;
+    margin: 3em 3em;
+    background-color: #fff;
+    border-radius: 4px;
+    padding-top: 50px;
+    padding-bottom: 35px;
 }
+
 .lista-pokemons ul li {
     background-color: #F2F2F2;
     border-radius: 10px;
@@ -100,4 +138,65 @@
 .lista-pokemons ul li img {
     width: 150px;
     height: 150px;
+}
+
+.rodape {
+}
+
+.info-rodape {
+    background-color: #3d4147ee;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.info-rodape div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.info-rodape div h3 {
+    font-size: x-large;
+}
+
+.info-rodape div a{
+    color: white;
+    text-decoration: none;
+}
+
+#rodape-contato {
+    display: flex;
+    gap: 30px;
+}
+
+#rodape-contato #icons-rodape-contato {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+#rodape-contato #icons-rodape-contato img {
+    width: 50px;
+    height: 50px;
+}
+
+#rodape-contato button {
+    background-color: #D64D6B;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+}
+
+.info-rodape #rodape-logo img {
+    width: 200px;
+    height: 150px;
+}
+
+#rodape-copy {
+    background-color: #32373D;
+    padding: 12px 0;
+    text-align: center;
+    color: white;
 }

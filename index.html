@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <!--    Font    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
     <title>PokeTeam</title>
 </head>
 <body>
-    <header class="container-time">
+    <header class="container-time" id="home">
         <h1>Time Pokémon</h1>
         <div id="descrição-time">
             <label for="nome-time">Nome do Time:</label>
@@ -16,23 +20,61 @@
         </div>
         <div id="formação-time">
             <ul>
-                
+
             </ul>
         </div>
     </header>
-
-    <section class="container-pokemons">
+    
+    <section class="container-pokemons-fundo">
         <div id="pesquisa">
             <input type="text" id="procurar-input" placeholder="Procurar pokémon">
             <input type="submit" value="Pesquisar" id="procurar-button">
         </div>
-        <div class="lista-pokemons">
-            <ul>
+        <div class="container-pokemons">
+            
+            <div class="lista-pokemons">
+                <ul>
 
-            </ul>
+                </ul>
+            </div>
         </div>
     </section>
-
+    
+    
+    <footer class="rodape">
+        <div class="info-rodape">
+            <div id="rodape-logo">
+                <img src="/img/pokemon-logo.png">
+            </div>
+            <div id="rodape-inicio">
+                <h3>Inicio</h3>
+                <a href="#home">Home</a>
+                <a href="#">Lorem Ipsum</a>
+                <a href="#">Lorem Ipssum</a>
+            </div>
+            <div id="rodape-sobre">
+                <h3>Sobre-nós</h3>
+                <a href="#">Informações</a>
+                <a href="#">Contato</a>
+                <a href="#">Blog</a>
+            </div>
+            <div id="rodape-suporte">
+                <h3>Suporte</h3>
+                <a href="#">FAQ</a>
+                <a href="#">Telefones</a>
+                <a href="#">Chat</a>
+            </div>
+            <div id="rodape-contato">
+                <div id="icons-rodape-contato">
+                <a href=""><img src="/icons/facebook_1384005.png" alt="#"></a>
+                <a href=""><img src="/icons/instagram_1384015.png" alt="#"></a>
+                <a href=""><img src="/icons/twitter_5968830.png" alt=""></a>
+                </div>
+                <button type="button">Contato</button>
+            </div>
+        </div>
+        <div id="rodape-copy">© 2019 Copyright - Pokémon Team</div>
+    </footer>
     <script src="js/script.js"></script>
 </body>
 </html>
