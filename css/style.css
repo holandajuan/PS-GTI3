@@ -6,7 +6,7 @@
 }
 
 .container-time {
-    background-image: url(/img/site-pokemon-background.webp);
+    background-image: url(../img/site-pokemon-background.webp);
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 2em;

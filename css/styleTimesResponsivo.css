@@ -1,0 +1,30 @@
+@media (max-width:415px) {
+    .times-container {
+        gap: 0px;
+    }
+
+    .time ul {
+        gap: 5px;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .time .nomeTime {
+        font-size: x-large;
+        padding: 0px 13px 0px 13px;
+        font-weight: bold;
+    }
+
+    .time ul li{
+        width: 130px;
+    }
+
+    .time ul li p {
+        font-size: 80%;
+    }
+
+    .time img {
+        width: 95px;
+        height: 95px;
+    }
+}

@@ -73,9 +73,14 @@ function cardClick(pokemon) {
     arrayTime.push(pokemon);
 }
 
-function salvaNomeTime() {
-    localStorage.setItem(nomeTime.value, JSON.stringify(arrayTimes))
-}
+document.getElementById('btn-salvartime').addEventListener('click', function (e) {
+    if (nomeTime.value === '') {
+        e.preventDefault();
+        alert('Campo vazio');
+    } else {
+        localStorage.setItem(nomeTime.value, JSON.stringify(arrayTimes));
+    }
+})
 
 
 fetchPokemons();
