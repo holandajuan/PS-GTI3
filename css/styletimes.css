@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+header {
+    background-color: #f44336; /* Vermelho para um tema Pokémon */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    height: 150px;
+}
+
+header h2 {
+    font-size:xx-large;
+    padding-bottom: 20px;
+}
+
+header a{
+    text-decoration: none;
+    color: white;
+    background-color: yellowgreen;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.times-container {
+    background-color: #8A2BE2;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.time {
+    background-color: white;
+    justify-content: space-around;
+}
+
+.nomeTime {
+    font-size: xx-large;
+}
+
+
+.times-container .time, ul {
+    display: flex;
+    align-items: center;
+}
+
+.time ul {
+    gap: 40px;
+    padding: 20px;
+}
+
+.time ul li {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    background-color:#F2F2F2;
+    border-radius: 4px;
+    width: 180px;
+    padding: 5px;
+}
+
+.time img {
+    width: 100px;
+    height: 100px;
+    align-self: center;
+}
+
+/* Adicione mais estilos conforme necessário */

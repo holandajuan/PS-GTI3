@@ -1,3 +1,4 @@
+
 const listaPokemons = document.querySelector('.lista-pokemons ul');
 const nomeTime = document.getElementById('nome-time');
 let selectedPokemons = [];
@@ -12,7 +13,7 @@ async function fetchPokemons() {
         console.error('Erro durante a requisição', error);
     }
 }
-
+let arrayTimes = [];
 function mostraPokemons(pokemons) {
     pokemons.forEach(async (pokemon) => {
         const response = await fetch(pokemon.url);
@@ -21,13 +22,22 @@ function mostraPokemons(pokemons) {
         const card = criaCardPokemon(data);
 
         card.addEventListener("click", function () {
-            handleCardClick(card);
+            console.log(data);
+            const objetoPokemon = {
+                'nome': data.name,
+                'id': data.id,
+                'tipo': data.types.map(tipo => tipo.type.name).join(', '),
+                'img': data.sprites.front_default
+            }
+            if (arrayTimes.length < 6) arrayTimes.push(objetoPokemon);
+
+            cardClick(card);
         });
         listaPokemons.appendChild(card);
     });
 }
-
 function criaCardPokemon(pokemon) {
+
     const card = document.createElement('li');
     card.classList.add('card');
     card.style.listStyle = 'none';
@@ -55,12 +65,17 @@ function criaCardPokemon(pokemon) {
 }
 
 let arrayTime = [];
-function handleCardClick(pokemon) {
+function cardClick(pokemon) {
     if (arrayTime.length >= 6) return;
 
     const time = document.querySelector('#formação-time ul');
     time.appendChild(pokemon);
     arrayTime.push(pokemon);
 }
+
+function salvaNomeTime() {
+    localStorage.setItem(nomeTime.value, JSON.stringify(arrayTimes))
+}
+
 
 fetchPokemons();

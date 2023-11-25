@@ -1,0 +1,89 @@
+@media (max-width:415px){
+    /*formação-time*/
+    #formação-time ul {
+        padding: 15px 0;
+        gap: 1em;
+        color: azure;
+        font-size: 14px;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    #formação-time ul li {
+        width: 112px;
+    }
+
+    #formação-time ul li img {
+        width: 95px;
+        height: 95px;
+    }
+
+
+    /*container-pokemons*/
+    .lista-pokemons ul {
+        margin: 3em 1em;
+        gap: 1em;
+        padding-top: 30px;
+    }
+
+    .lista-pokemons ul li {
+        padding: 5px;
+        width: 112px;
+    }
+
+    .lista-pokemons ul li img {
+        width: 95px;
+        height: 95px;
+    }
+
+    .lista-pokemons ul li p{
+        font-size: 80%;
+    }
+
+
+    /*rodaoe-info*/
+    .info-rodape #rodape-logo img {
+        display: none;
+    }
+
+    .info-rodape {
+        padding: 5px;
+    }
+
+    .info-rodape div h3, a{
+        font-size: 70%;
+    }
+
+    .info-rodape #rodape-logo img {
+        width: 30px;
+        height: 30px;
+    }
+
+    /*rodape-contato*/
+    #rodape-contato {
+        display: flex;
+        gap: 0;
+        justify-content: space-around;
+    }
+    #rodape-contato #icons-rodape-contato img {
+        width: 20px;
+        height: 20px;
+    }
+    #rodape-contato button {
+        background-color: #D64D6B;
+        height: 35px;
+        width: 100px;
+        border-radius: 5px;
+        border: none;
+    }
+
+    /*rodape-copy*/
+    #rodape-copy {
+        font-size: 80%;
+        background-color: #32373D;
+        padding: 9px;
+        text-align: center;
+        justify-content: center;
+        color: white;
+    }
+}

@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/styleResponsivo.css">
     <!--    Font    -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" 
+    rel="stylesheet">
     <title>PokeTeam</title>
 </head>
 <body>
@@ -16,7 +18,7 @@
         <div id="descrição-time">
             <label for="nome-time">Nome do Time:</label>
             <input type="text" id="nome-time" placeholder="Digite o nome do time">
-            <button onclick="saveTeam()">Salvar Time</button>
+            <a href="time.html"><button onclick="salvaNomeTime()">Salvar Time</button></a>
         </div>
         <div id="formação-time">
             <ul>
@@ -29,7 +31,7 @@
         <div class="procurar-pokemon-seta">
             <div id="pesquisa">
                 <input type="text" id="procurar-input" placeholder="Procurar pokémon">
-                <input type="submit" value="Pesquisar" id="procurar-button">
+                <input type="submit" value="Pesquisar" id="procurar-button" onclick="pesquisarPokemon()">
             </div>
             <div id="seta-rodape">
                 <a href="#rodape"><img src="/icons/icon-seta-para-baixo.png"></a>                
