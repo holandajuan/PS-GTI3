@@ -22,7 +22,6 @@ function mostraPokemons(pokemons) {
         const card = criaCardPokemon(data);
 
         card.addEventListener("click", function () {
-            console.log(data);
             const objetoPokemon = {
                 'nome': data.name,
                 'id': data.id,
@@ -81,6 +80,46 @@ document.getElementById('btn-salvartime').addEventListener('click', function (e)
         localStorage.setItem(nomeTime.value, JSON.stringify(arrayTimes));
     }
 })
+
+async function pesquisarPokemon() {
+    const termoPesquisa = inputPesquisa.value.toLowerCase();
+
+    // Remover todos os cards atuais
+    listaPokemons.innerHTML = '';
+
+    // Se o campo de pesquisa estiver vazio, mostrar todos os cards novamente
+    if (termoPesquisa === '') {
+        fetchPokemons();  // Recarrega todos os Pokémon
+        return;
+    }
+
+    try {
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${termoPesquisa}`);
+        const data = await response.json();
+
+        const card = criaCardPokemon(data);
+        listaPokemons.appendChild(card);
+
+        // Adicionar o evento de clique após criar o card
+        card.addEventListener("click", function () {
+            console.log(data);
+            const objetoPokemon = {
+                'nome': data.name,
+                'id': data.id,
+                'tipo': data.types.map(tipo => tipo.type.name).join(', '),
+                'img': data.sprites.front_default
+            }
+            if (arrayTimes.length < 6) arrayTimes.push(objetoPokemon);
+
+            cardClick(card);
+            fetchPokemons();
+        });
+    } catch (error) {
+        console.error('Erro durante a requisição', error);
+        console.log('Nenhum Pokémon encontrado');
+    }
+}
+
 
 
 fetchPokemons();
